@@ -1,66 +1,101 @@
 
-# Event APP
 
-A brief description of what this project does and who it's for
+# Event Management App
 
+---
 
-## Back-end Setup
+##  Back-end Setup (Laravel)
 
-1. Requirements
-php 8.4, 
-mysql 8.0
+###  Requirements
 
-2. Clone this repository
-3. Then go to directory path in your terminal
-`cd even-backend`
+- PHP `^8.4`
+- MySQL `^8.0`
 
-4. Install 
-`composer install`
+###  Steps
 
-5. Update DB configuration in .env file.
+1. **Clone the repository**  
+  
 
-`DB_CONNECTION=mysql
- DB_HOST=127.0.0.1
- DB_PORT=3306
- DB_DATABASE=eventapp
- DB_USERNAME=root
- DB_PASSWORD=`
+2. **Go to project directory**
 
-6. Dump some event data and admin credentials
-`php artisan migrate:fresh --seed`
+   ```bash
+   cd even-backend
+   ```
 
-7. Run Server
-`php artisan serve`
+3. **Install dependencies**
 
-`http://127.0.0.1:8000`
+   ```bash
+   composer install
+   ```
 
-8. Login
-Email: `admin@admin.com`
-Pass: `Admin@123`
+4. **Configure `.env` file**
+   Update database credentials:
 
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=eventapp
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
 
+5. **Run migrations and seed data**
 
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
 
-## Frint-end Setup
+6. **Start Laravel server**
 
-1. Requirements
-node v22.14.0, 
-npm 11.3.0
+   ```bash
+   php artisan serve
+   ```
 
-2. Then go to directory path in your terminal
-`cd react-events-ui`
+   Open: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-3. Install 
-`npm install`
+7. **Admin Login**
 
-4. Update backend URL in .env.local file.
+   * Email: `admin@admin.com`
+   * Password: `Admin@123`
 
-`NEXT_PUBLIC_API_URL=http://localhost:8000/api`
+---
 
+##  Front-end Setup (Next.js)
 
-5. Run Server
-`npm run dev`
+###  Requirements
 
-`http://localhost:3000`
+* Node.js `v22.14.0`
+* npm `v11.3.0`
+
+###  Steps
+
+1. **Navigate to frontend directory**
+
+   ```bash
+   cd react-events-ui
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set environment variables**
+   Create `.env.local` file and add:
+
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:8000/api
+   ```
+
+4. **Run dev server**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open: [http://localhost:3000](http://localhost:3000)
+
 
 
